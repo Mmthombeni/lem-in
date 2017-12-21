@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:32:29 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/12/16 17:15:25 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/12/20 13:30:15 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		short_dist(t_room *room, int dist)
 		return (dist);
 	adj_rooms = room->adj_rooms;
 	min = MAX_INT;
-	ft_list_push_back(&v_rooms, room);
+	ft_list_push(&v_rooms, room);
 	while (adj_rooms)
 	{
 		rm = (t_room *)adj_rooms->data;

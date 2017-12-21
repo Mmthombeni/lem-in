@@ -6,9 +6,11 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 13:19:12 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/12/14 23:59:48 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/12/20 13:38:50 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "lemin.h"
 
 int		add_startroom(t_farm *farm, int *stage)
 {
@@ -51,7 +53,7 @@ int		room_added(t_farm *farm, char *line, int *stage)
 		if (add_startroom(farm, stage) == 0)
 			return(0);
 	}
-	else if (ft_strcmp(&line[1], "#end") == 0 && stage == 2)
+	else if (ft_strcmp(&line[1], "#end") == 0 && *stage == 2)
 		if (add_endroom(farm, stage) == 0)
 			return(0);
 	return(1);

@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 02:22:41 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/12/16 13:05:45 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/12/20 12:45:21 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	move_ant(t_room *from, t_room *to, t_list **ants)
 		{
 			putmove(from->ant, to->name);
 			to->ant = from->ant;
-			ft_list_push_back(ants, to);
+			ft_list_push(ants, to);
 			from->ant = 0;
 		}
 	}

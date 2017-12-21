@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 01:51:03 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/12/16 13:01:39 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/12/21 15:36:44 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,13 @@ void	add_room(t_list **rooms, char *name, t_type type, int n)
 	room = ft_create_room(rname);
 	room->type = type;
 	room->numants = n;
-	ft_list_push_back(rooms, room);
+	ft_list_push(rooms, room);
 }
 
 void	add_adjroom(t_list **list, t_room *room)
 {
 	if (contains(*list, room) == 0)
-		ft_list_push_back(list, room);
+		ft_list_push(list, room);
 }
 
 int		add_link(t_farm *farm, char *link)
@@ -77,13 +77,13 @@ int		add_link(t_farm *farm, char *link)
 		if (room1 == NULL)
 		{
 			room1 = ft_create_room(names[0]);
-			ft_list_push_back(&farm->rooms, room1);
+			ft_list_push(&farm->rooms, room1);
 		}
 		room2 = getroom(farm, names[1]);
 		if (room2 == NULL)
 		{
 			room2 = ft_create_room(names[1]);
-			ft_list_push_back(&farm->rooms, room2);
+			ft_list_push(&farm->rooms, room2);
 		}
 		add_adjroom(&room2->adj_rooms, room1);
 		add_adjroom(&room1->adj_rooms, room2);

@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 02:53:31 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/12/16 17:14:28 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/12/20 13:20:16 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@ void	verify_path(t_room *room, t_list **exp_rooms)
 	t_room			*rm;
 
 	if (contains(*exp_rooms, room) == 0)
-		ft_list_push_back(exp_rooms, room);
+		ft_list_push(exp_rooms, room);
 	if (room->type == END)
 		return ;
 	adj_rooms = room->adj_rooms;
-	ft_list_push_back(&v_rooms, room);
+	ft_list_push(&v_rooms, room);
 	while (adj_rooms)
 	{
 		rm = (t_room *)adj_rooms->data;

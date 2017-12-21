@@ -6,7 +6,7 @@
 /*   By: mmthombe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 04:09:46 by mmthombe          #+#    #+#             */
-/*   Updated: 2017/12/16 17:12:42 by mmthombe         ###   ########.fr       */
+/*   Updated: 2017/12/20 13:23:58 by mmthombe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	move_ants(t_room *room, t_list **list)
 
 	adj_rooms = room->adj_rooms;
 	min = MAX_INT;
-	ft_list_push_back(&v_rooms, room);
+	ft_list_push(&v_rooms, room);
 	while (adj_rooms)
 	{
 		adj = (t_room *)adj_rooms->data;
